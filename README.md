@@ -23,7 +23,7 @@ Applicazione console in C# per la gestione di un inventario prodotti, con persis
 | File | Responsabilità |
 |------|---------------|
 | `Prodotto.cs` | Modello dati |
-| `IInventario.cs` | Interfaccia con le operazioni CRUD |
+| `Inventario.cs` | Interfaccia con le operazioni CRUD |
 | `InventarioService.cs` | Implementazione CRUD (aggiunta, rimozione, modifica) |
 | `FileHelper.cs` | Ricerca e report |
 | `InventarioContext.cs` | Configurazione Entity Framework Core |
