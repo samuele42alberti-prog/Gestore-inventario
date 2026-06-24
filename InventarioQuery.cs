@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 
-public class FileHelper
+public class InventarioQuery
 {
     //database
     private readonly InventarioContext ctx;
-    public FileHelper(InventarioContext  ctx)
+    public InventarioQuery(InventarioContext  ctx)
     {
         this.ctx = ctx;
     }

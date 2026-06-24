@@ -3,10 +3,11 @@
 bool continua = true;
 //inventario context
 InventarioContext ctx = new InventarioContext();
+ctx.Database.EnsureCreated();
 //inventario
 InventarioService inventario = new InventarioService(ctx);
 //file helper
-FileHelper fileHelper = new FileHelper(ctx);
+InventarioQuery inventarioQuery = new InventarioQuery(ctx);
 
 //ciclo principale
 while(continua)
@@ -116,12 +117,12 @@ while(continua)
         //ordine lista
         Console.WriteLine("Premi 1 per ottenere la lista in ordine alfabetico, 2 per ottenerla in ordine crescente di prezzo");
         int ord = int.Parse(Console.ReadLine());
-        await fileHelper.Ricerca(nomeR, catR, minR, maxR, ord);
+        await inventarioQuery.Ricerca(nomeR, catR, minR, maxR, ord);
         break;
 
         //report
         case 5:
-        await fileHelper.Report();
+        await inventarioQuery.Report();
         break;
 
         //esci
